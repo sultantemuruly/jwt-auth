@@ -16,7 +16,7 @@ export const AuthForm = () => {
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://127.0.0.1:8000/register", {
+      const res = await axios.post("http://127.0.0.1:8000/api/register", {
         name,
         email,
         password,
@@ -34,7 +34,7 @@ export const AuthForm = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://127.0.0.1:8000/login", {
+      const res = await axios.post("http://127.0.0.1:8000/api/login", {
         email: loginEmail,
         password: loginPassword,
       });
